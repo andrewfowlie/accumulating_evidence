@@ -43,6 +43,8 @@ if __name__ == "__main__":
     zl = z_from_p(pl)
     tf = pg / pl
 
+    print("MC local p = ", pl)
+    print("MC global p = ", pg)
     print("MC local significances = ", zl)
     print("MC global significance = ", zg)
     print("MC trials factor = ", tf)

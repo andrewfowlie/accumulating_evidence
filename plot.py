@@ -25,13 +25,14 @@ if __name__ == "__main__":
              histtype="step", lw=2, label="Floating mass")
 
     x = np.linspace(0, 25, 10000)
-    plt.plot(x, pdf_half_chi2(x, 1), label=r"$\frac12 \chi^2$ --- used in ref.~[1]")
-    plt.plot(x, pdf_half_chi2(x, n_channels), color="DarkGreen", label=r"$\frac12 \chi^2_6$")
+    plt.plot(x, pdf_half_chi2(x, 1), lw=2, label=r"$\frac12 \chi^2$ --- used in ref.~[1]")
+    plt.plot(x, pdf_half_chi2(x, n_channels), lw=2, color="DarkGreen", label=r"$\frac12 \chi^2_6$")
 
     plt.xlabel("$\lambda$")
     plt.ylabel("PDF")
     plt.yticks([])
-    plt.ylim(0, 0.7)
+    plt.ylim(0, 0.5)
+    plt.xlim(-1, 20)
 
     plt.legend()
     plt.savefig("dist.pdf")
