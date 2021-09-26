@@ -13,7 +13,7 @@ from data import n_channels
 if __name__ == "__main__":
 
     plt.rc('text', usetex=True)
-    plt.rc('text.latex', preamble=r'\usepackage{fourier}\usepackage{amsmath}')
+    plt.rc('text.latex', preamble=r'\usepackage{amsmath}')
     plt.rc('font', **{'family':'serif', 'size': 16})
 
     test_statistic_global = np.load("data/test_statistic_global.npy")
