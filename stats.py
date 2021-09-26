@@ -34,7 +34,7 @@ def z_from_p(p):
 
 def euler_function(dof, level):
     """
-    @returns Characteristic Euler function for chi-squared with particular dof
+    @returns Euler density for chi-squared with particular dof
 
     See theorem 15.10.1
     https://link.springer.com/content/pdf/10.1007%2F978-0-387-48116-6.pdf
@@ -43,9 +43,11 @@ def euler_function(dof, level):
 
 def p_global(level, dof, N):
     """
-    EC for chi^2_{5/2} is just a mixture of ECs
+    Euler density for the mixture 1/2 chi^2_n is just the same mixture of Euler densities
+    for the chi^2 fields in the mixture.
+
+    See eq. 15 and theorem 1.
     https://arxiv.org/pdf/1207.3840.pdf
-    eq. 15 and theorem 1.
     """
     i = np.arange(1, dof + 1)
     return p_local(level, dof) + N * 0.5**dof * (comb(dof, i) * euler_function(i, level)).sum()
