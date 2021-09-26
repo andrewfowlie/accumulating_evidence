@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# numpy serialized objects
+*.npy
+
+# plots
+*.pdf
