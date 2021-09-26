@@ -36,10 +36,10 @@ def euler_function(dof, level):
     """
     @returns Characteristic Euler function for chi-squared with particular dof
 
-    See \rho_1(c) on p29
-    https://arxiv.org/pdf/1803.03858.pdf
+    See theorem 15.10.1
+    https://link.springer.com/content/pdf/10.1007%2F978-0-387-48116-6.pdf
     """
-    return np.sqrt(2. / np.pi) * level**(0.5 * (dof - 1)) / gamma(0.5 * dof) * np.exp(-0.5 * level)
+    return level**(0.5 * (dof - 1)) * np.exp(-0.5 * level) / ((2. * np.pi)**0.5 * gamma(0.5 * dof) * 2.**(0.5 * (dof - 2)))
 
 def p_global(level, dof, N):
     """
