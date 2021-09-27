@@ -13,7 +13,7 @@ from data import n_channels
 
 if __name__ == "__main__":
 
-    colors = colors = plt.rcParams["axes.prop_cycle"].by_key()["color"]
+    colors = plt.rcParams["axes.prop_cycle"].by_key()["color"]
     palette = itertools.cycle(colors)
 
     plt.rc('text', usetex=True)
